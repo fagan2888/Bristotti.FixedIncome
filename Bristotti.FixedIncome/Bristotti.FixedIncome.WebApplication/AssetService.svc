@@ -1,1 +1,4 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Bristotti.FixedIncome.WebApplication.AssetService" CodeBehind="AssetService.svc.cs" %>
+﻿<%@ ServiceHost
+  Language="C#"
+  Service="AssetService"
+  Factory="Castle.Facilities.WcfIntegration.DefaultServiceHostFactory, Castle.Facilities.WcfIntegration" %>

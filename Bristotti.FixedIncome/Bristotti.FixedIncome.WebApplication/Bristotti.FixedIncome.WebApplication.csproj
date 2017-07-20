@@ -76,18 +76,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AssetService.svc" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssetService.svc.cs">
       <DependentUpon>AssetService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="IAssetService.cs" />
+    <Compile Include="Installers\BasicInstaller.cs" />
+    <Compile Include="Installers\HibernateInstaller.cs" />
+    <Compile Include="Model\AssetDTO.cs" />
+    <Compile Include="Model\Transformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

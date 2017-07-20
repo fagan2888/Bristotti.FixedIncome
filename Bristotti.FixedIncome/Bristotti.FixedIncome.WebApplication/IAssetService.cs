@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Bristotti.FixedIncome.WebApplication.Model;
 
 namespace Bristotti.FixedIncome.WebApplication
 {
@@ -12,9 +13,9 @@ namespace Bristotti.FixedIncome.WebApplication
     public interface IAssetService
     {
         [OperationContract]
-        string Get(Guid id);
+        AssetDTO Get(Guid id);
 
         [OperationContract]
-        string GetByTicker(string ticker);
+        AssetDTO GetByTicker(string ticker);
     }
 }
