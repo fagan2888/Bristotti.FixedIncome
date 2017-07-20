@@ -1,3 +1,3 @@
 # Bristotti.FixedIncome
 
-meus testes aleatórios numa aplicação um pouco mais distribuida
+my random tests regarding a tiny distributed application
