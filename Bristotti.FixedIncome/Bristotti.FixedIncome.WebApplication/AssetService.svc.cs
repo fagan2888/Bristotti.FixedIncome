@@ -1,13 +1,7 @@
-﻿using Bristotti.FixedIncome.Model.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
-using System.Threading.Tasks;
-using Bristotti.FixedIncome.WebApplication.Model;
+﻿using System;
+using Bristotti.FixedIncome.Model;
+using Bristotti.FixedIncome.Model.Repositories;
+using Bristotti.FixedIncome.Model.Services;
 
 namespace Bristotti.FixedIncome.WebApplication
 {
@@ -20,14 +14,14 @@ namespace Bristotti.FixedIncome.WebApplication
             _assetRespository = assetRespository ?? throw new ArgumentNullException(nameof(assetRespository));
         }
 
-        public AssetDTO Get(Guid id)
+        public Asset Get(Guid id)
         {
-            return Transformer.Transform(_assetRespository.Get(id));
+            return _assetRespository.Get(id);
         }
 
-        public AssetDTO GetByTicker(string ticker)
+        public Asset GetByTicker(string ticker)
         {
-            return Transformer.Transform(_assetRespository.GetByTicker(ticker));
+            return _assetRespository.GetByTicker(ticker);
         }
     }
 }

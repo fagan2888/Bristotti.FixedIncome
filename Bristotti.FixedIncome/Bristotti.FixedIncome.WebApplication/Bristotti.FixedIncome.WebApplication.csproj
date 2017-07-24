@@ -77,6 +77,10 @@
   <ItemGroup>
     <Content Include="AssetService.svc" />
     <Content Include="Global.asax" />
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,11 +91,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IAssetService.cs" />
-    <Compile Include="Installers\BasicInstaller.cs" />
+    <Compile Include="Installers\ServicesInstaller.cs" />
     <Compile Include="Installers\HibernateInstaller.cs" />
-    <Compile Include="Model\AssetDTO.cs" />
-    <Compile Include="Model\Transformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +108,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bristotti.FixedIncome.DataAccess\Bristotti.FixedIncome.DataAccess.csproj">
+      <Project>{440CFFEF-3E76-4116-8372-7A910FF98ABE}</Project>
+      <Name>Bristotti.FixedIncome.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bristotti.FixedIncome.Model\Bristotti.FixedIncome.Model.csproj">
       <Project>{C5F9B854-4941-43A8-802D-6D0C59A13B75}</Project>
       <Name>Bristotti.FixedIncome.Model</Name>

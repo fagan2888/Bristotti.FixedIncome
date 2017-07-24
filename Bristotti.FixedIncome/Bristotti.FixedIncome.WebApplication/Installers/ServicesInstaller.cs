@@ -1,4 +1,7 @@
 ﻿using System;
+using Bristotti.FixedIncome.DataAccess.Repositories;
+using Bristotti.FixedIncome.Model.Repositories;
+using Bristotti.FixedIncome.Model.Services;
 using Castle.Facilities.WcfIntegration;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
@@ -11,11 +14,16 @@ namespace Bristotti.FixedIncome.WebApplication.Installers
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container
-                .AddFacility<WcfFacility>()
+                .AddFacility<WcfFacility>();
+
+            container
                 .Register(Component.For<IAssetService>()
                     .ImplementedBy<AssetService>()
-                    .AsWcfService()
-                    .LifestylePerWcfOperation());
+                    .Named("AssetService"));
+
+            container
+                .Register(Component.For<IAssetRepository>()
+                    .ImplementedBy<AssetRepository>());
         }
     }
 }

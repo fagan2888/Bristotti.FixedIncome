@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.ServiceModel.Web;
 using System.Text;
-using Bristotti.FixedIncome.WebApplication.Model;
+using System.Threading.Tasks;
+using Bristotti.FixedIndome.UI.Model;
 
-namespace Bristotti.FixedIncome.WebApplication
+namespace Bristotti.FixedIndome.UI.Services
 {
     [ServiceContract]
     public interface IAssetService
     {
         [OperationContract]
-        AssetDTO Get(Guid id);
+        Asset Get(Guid id);
 
         [OperationContract]
-        AssetDTO GetByTicker(string ticker);
+        Asset GetByTicker(string ticker);
     }
 }

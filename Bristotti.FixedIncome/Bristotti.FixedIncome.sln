@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bristotti.FixedIncome.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bristotti.FixedIncome.WebApplication", "Bristotti.FixedIncome.WebApplication\Bristotti.FixedIncome.WebApplication.csproj", "{C81C7A6F-9715-483A-B261-2E39CF640D9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bristotti.FixedIndome.UI", "Bristotti.FixedIndome.UI\Bristotti.FixedIndome.UI.csproj", "{AB7B501F-7A33-4C0F-9678-6EBD07E3D265}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C81C7A6F-9715-483A-B261-2E39CF640D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C81C7A6F-9715-483A-B261-2E39CF640D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C81C7A6F-9715-483A-B261-2E39CF640D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7B501F-7A33-4C0F-9678-6EBD07E3D265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7B501F-7A33-4C0F-9678-6EBD07E3D265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7B501F-7A33-4C0F-9678-6EBD07E3D265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7B501F-7A33-4C0F-9678-6EBD07E3D265}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
