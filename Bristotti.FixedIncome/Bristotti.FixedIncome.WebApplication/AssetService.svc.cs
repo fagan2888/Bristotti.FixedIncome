@@ -23,5 +23,10 @@ namespace Bristotti.FixedIncome.WebApplication
         {
             return _assetRespository.GetByTicker(ticker);
         }
+
+        public bool IsValid(Asset asset)
+        {
+            return true;
+        }
     }
 }

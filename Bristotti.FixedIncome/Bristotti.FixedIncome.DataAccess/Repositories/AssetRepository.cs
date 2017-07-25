@@ -22,7 +22,7 @@ namespace Bristotti.FixedIncome.DataAccess.Repositories
 
         public Asset GetByTicker(string ticker)
         {
-            return Session.QueryOver<Asset>().Where(a => a.Ticker.Equals(ticker)).List().FirstOrDefault();
+            return Session.QueryOver<Asset>().Where(a => a.Ticker == ticker).List().FirstOrDefault();
         }
     }
 }

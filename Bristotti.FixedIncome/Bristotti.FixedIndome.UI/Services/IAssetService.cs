@@ -16,5 +16,8 @@ namespace Bristotti.FixedIndome.UI.Services
 
         [OperationContract]
         Asset GetByTicker(string ticker);
+
+        [OperationContract]
+        bool IsValid(Asset asset);
     }
 }

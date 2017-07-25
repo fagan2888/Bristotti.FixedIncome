@@ -18,6 +18,7 @@ namespace Bristotti.FixedIncome.DataAccess
             Property(p => p.MaturityDate);
             Property(p => p.Notional);
             Property(p => p.Ticker);
+            Property(p => p.CurrencyId);
         }
     }
 }

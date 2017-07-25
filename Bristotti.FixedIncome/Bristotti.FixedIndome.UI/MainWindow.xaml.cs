@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,11 +24,19 @@ namespace Bristotti.FixedIndome.UI
         public MainWindow()
         {
             InitializeComponent();
+
+            Bootstrapper.Initialize();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var service = Bootstrapper.Container.Resolve<Services.IAssetService>();
+            var asset = service.GetByTicker("ASSET068");
 
+            asset.Notional -= 1e6m;
+            service.IsValid(asset);
+
+            ((ICommunicationObject) service).Close();
         }
     }
 }

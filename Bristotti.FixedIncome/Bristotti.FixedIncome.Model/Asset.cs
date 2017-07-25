@@ -20,5 +20,7 @@ namespace Bristotti.FixedIncome.Model
         public virtual DateTime? MaturityDate { get; set; }
         [DataMember]
         public virtual decimal Notional { get; set; }
+        [DataMember]
+        public virtual string CurrencyId { get; set; }
     }
 }

@@ -11,5 +11,8 @@ namespace Bristotti.FixedIncome.Model.Services
 
         [OperationContract]
         Asset GetByTicker(string ticker);
+
+        [OperationContract]
+        bool IsValid(Asset asset);
     }
 }
